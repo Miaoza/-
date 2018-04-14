@@ -19,6 +19,7 @@
                 margin: 10px 0;
                 flex: 1;
             }
+
             .border{
                 border-bottom: 1px solid #b2b2b2;
                 line-height: 0;
@@ -31,25 +32,43 @@
             }
 
             .border1{
+                margin: 20px 0;
                 line-height: 0;
                 text-align: center;
-                margin: 20px 0;
-                display: flex;
-            }
-            .border1 span{
-                margin: 0 2px;
-            }
-            .border1:before{
-                content: "";
-                width: 100%;
-                flex: 1;
-                border-bottom: 1px solid #b2b2b2;
             }
             .border1:after{
+                display: block;
                 content: "";
-                flex: 1;
+                border-top: 1px solid #ed573d;
                 width: 100%;
-                border-bottom: 1px solid #b2b2b2;
+            }
+            .border1 span{
+                background: #fff;
+                padding: 0 3px;
+            }
+
+            .border2{
+                line-height: 0;
+                text-align: center;
+            }
+            .border2 span{
+                position: relative;
+                display: inline-block;
+                width: 100%;
+            }
+            .border2 span:before{
+                content: "";
+                width: 50%;
+                border-top: 1px solid #ccc;
+                position: absolute; 
+                right: -20px;
+            }
+            .border2 span:after{
+                content: "";
+                width: 50%;
+                border-top: 1px solid #ccc;
+                position: absolute; 
+                left: -20px;
             }
         </style>
     </head>
@@ -67,9 +86,14 @@
             <span>xxx</span>
         </div>
 
-        <!-- border+伪元素 :before :after flex 不兼容ie9 -->
+        <!-- border+伪元素 :after 兼容ie9，背景色不能有变化 -->
         <div class="border1">
-            <span>xxx<span>
+            <span>xxx</span>
+        </div>
+
+        <!-- border+伪元素+absolute 兼容ie9 -->
+        <div class="border2">
+            <span>xxx</span>
         </div>
     </body>
 </html>
