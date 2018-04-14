@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="./zaFor.css" />
+
+        <!-- // <script src="../plugin/jquery.min.js"></script> -->
+        <script src="./zaFor.js"></script>
+    </head>
+
+    <body>
+        <script>
+            // console.log(Miaoza);
+            this.a = [1, 2, 3];
+            this.b = 'hehe';
+            this.c = [{
+                id: 1,
+                name: 'nianko'
+            },{
+                id: 2,
+                name: 'heimi'
+            }];
+            this.d = [[1], [2], [3]];
+
+            this.myName = function(name, age) {
+                return name+age;
+            }
+
+            this.testFnObj = [{
+                id: 1,
+                fat: 'fei',
+                say: function(){
+                    return 'Hello, xiao fei e';
+                }
+            },{
+                id: 2,
+                fat: 'haishifei',
+                say: function(){
+                    return 'Hello, chun fei mao';
+                }
+            }]
+        </script>
+
+        <div class={{'asdc'}}></div>
+
+        <div za-for="i of a" type={{i}}>{{zaIndex}}</div>
+
+        <ul>
+            <li za-for="i of a">{{i}}</li>
+        </ul>
+
+        <li za-for="i of [3, 2, 1]">{{i}}</li>
+
+        <div za-for="item of c">
+            {{item.id}}---{{item.name}}
+        </div>
+
+        <div za-for="item of c">
+            {{item}}
+        </div>
+
+        <div za-for="item of d">{{item[0]}}</div>
+        {{'$^123'+'2&&34'}}
+        {{'123asdfv'}}234{{'hehda'}}{{"wa o"}}
+
+        <div class="{{myName('myName123', 12)}}">{{b}}</div>
+        {{ myName('hehe', 12) }}
+
+        <div za-for="item of testFnObj">
+            <div>{{item.id+item.fat}}</div>
+            <div>{{item.fat}}</div>
+            <div>{{item.say}}</div>
+        </div>
+    </body>
+</html>
