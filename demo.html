@@ -29,6 +29,28 @@
                 background: #fff;
                 padding: 0 3px;
             }
+
+            .border1{
+                line-height: 0;
+                text-align: center;
+                margin: 20px 0;
+                display: flex;
+            }
+            .border1 span{
+                margin: 0 2px;
+            }
+            .border1:before{
+                content: "";
+                width: 100%;
+                flex: 1;
+                border-bottom: 1px solid #b2b2b2;
+            }
+            .border1:after{
+                content: "";
+                flex: 1;
+                width: 100%;
+                border-bottom: 1px solid #b2b2b2;
+            }
         </style>
     </head>
 
@@ -40,9 +62,14 @@
             <hr />
         </div>
 
-        <!-- border属性+文本背景色覆盖边框，兼容ie9 -->
+        <!-- border属性+文本背景色覆盖边框，兼容ie9，背景色不能有变化 -->
         <div class="border">
             <span>xxx</span>
+        </div>
+
+        <!-- border+伪元素 :before :after flex 不兼容ie9 -->
+        <div class="border1">
+            <span>xxx<span>
         </div>
     </body>
 </html>
