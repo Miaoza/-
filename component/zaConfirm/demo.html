@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="./confirm.css" />
+
+        <script src="./confirm.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+        <script>
+            ZaConfirm.confirm({
+                title: 'hehehe',
+                text: 'aaaaaa',
+                sureBtn: 'sure btn',
+                sureBtnFn: 'what',
+                sureParam: {id: 1, name: 'nianko'},
+                cancelBtn: 'cancel',
+                cancelBtnFn: 'cancel',
+                cancelParam: 'avcad',
+            });
+
+            function what(para){
+                console.log(para);
+            }
+            function cancel(_pa){
+                console.log(_pa);
+            }
+        </script>
+    </body>
+</html>

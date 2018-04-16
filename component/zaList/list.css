@@ -1,0 +1,33 @@
+/*
+* @Author: nianko
+* @Date:   2018-04-16 16:42:24
+* @Last Modified by:   nianko
+* @Last Modified time: 2018-04-16 16:42:39
+*/
+body{
+    margin: 0;
+}
+.za-list{
+    width: 100%;
+}
+.za-item:first-child{
+    border-top: 1px solid #b2b2b2;
+}
+.za-item{
+    vertical-align: middle;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 5px 2px;
+}
+.za-item .za-avatar{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+.za-item .za-avatar img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}

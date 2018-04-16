@@ -1,0 +1,94 @@
+/*
+* @Author: nianko
+* @Date:   2018-04-16 16:48:46
+* @Last Modified by:   nianko
+* @Last Modified time: 2018-04-16 16:48:59
+*/
+button{
+    font-weight: bold;
+    padding: 5px;
+    outline: 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+    border-radius: 3px;
+    border: 1px solid #f2f2f2;
+}
+.za-disabled{
+    opacity: 0.7;
+}
+button,.za-default{
+    background-color: #c9c2c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c9c2c1)); 
+    background: -moz-linear-gradient(top, #f8f8f8, #c9c2c1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f8f8f8,endcolorstr=#c9c2c1);
+}
+button:active,.za-default:active{
+    border-color: #cccccc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c2c1), to(#f8f8f8)); 
+    background: -moz-linear-gradient(top, #c9c2c1, #f8f8f8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#c9c2c1,endcolorstr=#f8f8f8);
+}
+.za-primary{
+    color: #ffffff;
+    background-color: #1c4587;   
+    background: -webkit-gradient(linear, left top, left bottom, from(#6496e7), to(#1c4587)); 
+    background: -moz-linear-gradient(top, #6496e7, #1c4587);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#6496e7,endcolorstr=#1c4587);
+}
+.za-primary:active{
+    border-color: #1919b0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1c4587), to(#6496e7)); 
+    background: -moz-linear-gradient(top, #1c4587, #6496e7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#1c4587,endcolorstr=#6496e7);
+}
+.za-warn{
+    color: #ffffff;
+    background: #fdf353; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#fdf353), to(#dbaa13)); 
+    background: -moz-linear-gradient(top, #fdf353, #dbaa13);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fdf353,endcolorstr=#dbaa13);
+}
+.za-warn:active{
+    border-color: #f1c232;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dbaa13), to(#fdf353)); 
+    background: -moz-linear-gradient(top, #dbaa13, #fdf353);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#dbaa13,endcolorstr=#fdf353);
+}
+.za-success{
+    color: #ffffff;
+    background: #6aa84f; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#6aa84f), to(#398517)); 
+    background: -moz-linear-gradient(top, #6aa84f, #398517);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#6aa84f,endcolorstr=#398517);
+}
+.za-success:active{
+    border-color: #59b232;
+    background: -webkit-gradient(linear, left top, left bottom, from(#398517), to(#6aa84f)); 
+    background: -moz-linear-gradient(top, #398517, #6aa84f);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#398517,endcolorstr=#6aa84f);
+}
+.za-error{
+    color: #ffffff;
+    background: #e32020; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#e32020), to(#bd0101)); 
+    background: -moz-linear-gradient(top, #e32020, #bd0101);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#e32020,endcolorstr=#bd0101);
+}
+.za-error:active{
+    border-color: #c11414;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bd0101), to(#e32020)); 
+    background: -moz-linear-gradient(top, #bd0101, #e32020);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#bd0101,endcolorstr=#e32020);
+}
+.za-puler{
+    color: #ffffff;
+    background: #695ccb; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#695ccb), to(#333375)); 
+    background: -moz-linear-gradient(top, #695ccb, #333375);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#695ccb,endcolorstr=#333375);
+}
+.za-puler:active{
+    border-color: #411d9d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#333375), to(#695ccb)); 
+    background: -moz-linear-gradient(top, #333375, #695ccb);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#333375,endcolorstr=#695ccb);
+}

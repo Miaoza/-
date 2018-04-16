@@ -1,0 +1,36 @@
+/*
+* @Author: nianko
+* @Date:   2018-04-16 16:46:42
+* @Last Modified by:   nianko
+* @Last Modified time: 2018-04-16 16:47:03
+*/
+.za-card{
+    display: inline-block;
+    width: 240px;
+    min-height: 80px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #b2b2b2;
+    margin: 10px;
+    position: relative;
+    vertical-align: top;
+    word-wrap: break-word; 
+    word-break:break-all;
+}
+.za-card .za-card-title{
+    border-bottom: 1px solid #d0d0d0;
+    padding: 5px 10px;
+}
+.za-card .za-card-footer{
+    border-top: 1px solid #d0d0d0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 10px;
+}
+.za-card .za-card-content{
+    padding: 5px 10px;
+    margin-bottom: 32px;
+}

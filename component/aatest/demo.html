@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="./for.css" />
+
+        <script src="./miaoza.js"></script>
+    </head>
+
+    <body>
+        <script>
+            this.list = [{
+                id: 1,
+                name: 'Nianko',
+                age: 113
+            }, {
+                id: 2,
+                name: 'Neko',
+                age: 3
+            }, {
+                id: 3,
+                name: 'Natusme',
+                age: 16
+            }];
+            this.obj = {
+                cat: 'miao, i eat fish',
+                dog: 'wang, i eat meat',
+                food: 'i should be eated'
+            }
+
+            function getYourName (name) {
+                return name;
+            }
+            // this.zaIndex = 2;
+        </script>
+
+        <div za-for="item of list" style="border:1px solid #fe4562;">
+            {{item.id}}
+            <div class="test">name: {{item.name}}</div>
+            <div>age: {{item.age+item.age}}</div>
+        </div>
+
+        <div>{{list[0].name}}</div>
+
+        <div za-for="i of [1, 2, 3]">
+            {{i}}---{{zaIndex}}
+        </div>
+
+        <div za-for="(key, value) of obj" class="{{key+value}}">
+            {{key}}:{{value}}
+            <div class="{{value}}">{{key}}</div>
+        </div>
+
+        {{'dscvadv'}}{{vadsfvd}}
+        <div>
+            {{'advdf'}}
+            <div>{{123}}</div>
+            {{vdasv}vdf}aaa
+        </div>
+        {{zaIndex}}
+        <div>{{getYourName('HEMi')}}</div>
+    </body>
+</html>

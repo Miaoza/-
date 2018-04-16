@@ -1,0 +1,67 @@
+.za-alert{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.za-alert .alert-container{
+    width: 240px;
+    height: 140px;
+    background: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px #9e9a9a;
+}
+.za-alert .alert-container .alert-title{
+    text-align: left;
+    font-size: 16px;
+    color: #1c4587;
+    padding: 10px 10px 0;
+    font-weight: bold;
+}
+.za-alert .alert-container .alert-content{
+    text-align: left;
+    font-size: 16px;
+    color: #999999;
+    padding: 5px 10px 10px;
+    margin-bottom: 49px;
+    height: 52px;
+    word-break: break-all;
+    overflow-y: auto;
+}
+.za-alert .alert-container .alert-btn{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.za-alert .alert-btn button{
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+    border-radius: 3px;
+    border: 1px solid #f2f2f2;
+}
+
+.za-alert .alert-btn button{
+    background-color: #c9c2c1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c9c2c1)); 
+    background: -moz-linear-gradient(top, #f8f8f8, #c9c2c1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#f8f8f8,endcolorstr=#c9c2c1);
+}
+.za-alert .alert-btn button:active{
+    border-color: #cccccc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9c2c1), to(#f8f8f8)); 
+    background: -moz-linear-gradient(top, #c9c2c1, #f8f8f8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#c9c2c1,endcolorstr=#f8f8f8);
+}
