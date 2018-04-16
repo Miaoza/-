@@ -1,0 +1,29 @@
+body{
+    background: #dac9ea;
+}
+.za-photo{
+    margin: 60px auto;
+    position: relative;
+    /*width: 1000px;*/
+}
+.za-photo img{
+    position: absolute;
+    padding: 10px;
+    background: #ffffff;
+    border: none;
+    border-radius: 6px;
+    width: 240px;
+    height: 160px;
+    transition: 1s;
+    z-index: 1;
+    background: radial-gradient(transparent 0px, transparent 4px, white 4px, white );
+    background-size: 20px 20px;
+    background-position: -10px -10px;
+}
+.za-photo img:hover{
+    /*transform: rotate(0deg);*/
+    /*transform: scale(1.5);*/
+    box-shadow:10px 10px 15px #bfb1cc; 
+    z-index:999;
+    border-bottom-right-radius:140px 30px;
+}
