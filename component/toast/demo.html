@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="stylesheet" type="text/css" href="./toast.css" />
+
+        <script src="./toast.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+        <script>
+            ZaToast.info({message:'普通消息提示', duration: 8000});
+            ZaToast.success({message: '成功消息提示', duration: 12000});
+            ZaToast.warn({message: '警告提示信息', duration: 2000});
+            ZaToast.error({message: '错误提示', duration: 2000});
+
+            setTimeout(function () {
+                ZaToast.error({message: '错aaa误提示', duration: 2000});
+            }, 1000);
+        </script>
+    </body>
+</html>
