@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        count down circle
+    </title>
+
+    <style>
+        .container {
+            width: 180px;
+            height: 180px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myCanvas">
+        </canvas>
+
+    </div>
+
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = "#ccc";
+        ctx.arc(75, 75, 50, 0, 360 * Math.PI / 180, false);
+        ctx.stroke();
+        ctx.closePath();
+
+        canvas.onclick = function (ev) {
+            var ev = ev || event;
+            var l = ev.clientX - canvas.offsetLeft;
+            var t = ev.clientY - canvas.offsetTop;
+
+            if (ctx.isPointInStroke(l, t)) {
+                console.log(`(${l},${t})`)
+                var x = l - 75
+                var y = t - 75
+                var O = Math.acos(x / (Math.sqrt(x * x + y * y)))
+                console.log(O)
+                // Math.atan2(t, l)
+                // var oc = l > 75 && t <= 75 ? Math.atan2(t, l) : l > 75 && t < 75 ? Math.atan2(t, l) - Math.PI * 1 / 2 : l < 75 && t < 75 ? Math.atan2(t, l) + Math.PI : Math.atan2(t, l) + Math.PI * 1 / 2
+                // var oc = Math.atan2(t, l)
+                ctx.beginPath();
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = "#fd34e6"
+                ctx.arc(75, 75, 50, -Math.PI * 1 / 2, y < 0 ? -O : O, false);
+                ctx.stroke();
+                ctx.closePath()
+            }
+        }
+    </script>
+</body>
+
+</html>
