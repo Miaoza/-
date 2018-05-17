@@ -34,6 +34,21 @@
         ctx.arc(75, 75, 50, 0, 360 * Math.PI / 180, false);
         ctx.stroke();
         ctx.closePath();
+        ctx.save()
+
+        function coundDown(O, t) {
+            console.log(t)
+            setTimeout(function () {
+                ctx.beginPath();
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = "#ccc"
+                var o1 = O - Math.PI / 30
+                ctx.arc(75, 75, 50, o1, O, false);
+                ctx.stroke();
+                ctx.closePath();
+                t === 0 || coundDown(o1, t - 1)
+            }, 1000)
+        }
 
         canvas.onclick = function (ev) {
             var ev = ev || event;
@@ -45,16 +60,18 @@
                 var x = l - 75
                 var y = t - 75
                 var O = Math.acos(x / (Math.sqrt(x * x + y * y)))
-                console.log(O)
-                // Math.atan2(t, l)
-                // var oc = l > 75 && t <= 75 ? Math.atan2(t, l) : l > 75 && t < 75 ? Math.atan2(t, l) - Math.PI * 1 / 2 : l < 75 && t < 75 ? Math.atan2(t, l) + Math.PI : Math.atan2(t, l) + Math.PI * 1 / 2
-                // var oc = Math.atan2(t, l)
+                O = y < 0 ? -O : O
+                var time = parseInt((1 / 2 * Math.PI + O) / (Math.PI / 30))
+                time = l < 75 && t < 75 ? 60 + time : time;
+
                 ctx.beginPath();
                 ctx.lineWidth = 10;
                 ctx.strokeStyle = "#fd34e6"
-                ctx.arc(75, 75, 50, -Math.PI * 1 / 2, y < 0 ? -O : O, false);
+                ctx.arc(75, 75, 50, Math.PI * 3 / 2, O, false);
                 ctx.stroke();
-                ctx.closePath()
+                ctx.closePath();
+                // ctx.restore();
+                coundDown(O, time)
             }
         }
     </script>
