@@ -34,7 +34,6 @@
         ctx.arc(75, 75, 50, 0, 360 * Math.PI / 180, false);
         ctx.stroke();
         ctx.closePath();
-        ctx.save()
 
         function coundDown(O, t) {
             console.log(t)
@@ -47,6 +46,7 @@
                 ctx.stroke();
                 ctx.closePath();
                 t === 0 || coundDown(o1, t - 1)
+                t === 0 && window.location.reload()
             }, 1000)
         }
 
@@ -70,7 +70,6 @@
                 ctx.arc(75, 75, 50, Math.PI * 3 / 2, O, false);
                 ctx.stroke();
                 ctx.closePath();
-                // ctx.restore();
                 coundDown(O, time)
             }
         }
