@@ -1,0 +1,123 @@
+html{
+    font-size: 62.5%
+}
+body{
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+nav{
+    background: #93c47d;
+}
+nav ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0 1rem;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    color: #fff;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+ul li.active{
+    border-bottom: 2px solid #274e13;
+    color: #274e13;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+}
+footer .footer{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b2b2b2;
+    border-top: 0.1rem solid #b2b2b2;
+    padding: 0.5rem 0;
+}
+
+section{
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+section .left{
+    width: 25rem;
+    height: 18rem;
+    background: #93c47d;
+    border: 1px solid #274e13;
+}
+section .main{
+    width: 100%;
+    height: 18rem;
+    background: #ff00ff;
+    border: 1px solid #980b98;
+}
+section .right{
+    width: 25rem;
+    height: 18rem;
+    background: #ffe28b;
+    border: 1px solid #a88006;
+}
+
+@media screen and (max-device-width: 1024px) and (min-device-width: 768px) {
+    ul li{
+        list-style: none;
+        font-size: 2.5rem;
+    }
+    footer .footer{
+        font-size: 2.0rem;
+    }
+
+    section {
+        display: block;
+    }
+    section .left{
+        box-sizing: border-box;
+        width: 100%;
+        margin: auto;
+    }
+    section .main{
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+    }
+    section .right{
+        box-sizing: border-box;
+        float: right;
+        width: 50%;
+    }
+}
+
+@media screen and (max-device-width: 640px){
+    nav ul{
+        display: flex;
+        padding: 0;
+    }
+    ul li{
+        flex: 1;
+        height: 3.6rem;
+        line-height: 3.6rem;
+        text-align: center;
+    }
+
+    section {
+        display: block;
+    }
+    section .left{
+        width: 100%;
+        margin: auto;
+    }
+    section .main{
+        width: 100%;
+        margin: auto;
+    }
+    section .right{
+        width: 100%;
+        margin: auto;
+    }
+}
