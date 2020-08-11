@@ -1,5 +1,3 @@
-<!-- 未解决fixed错位bug -->
-
 
 <el-table ref=“table" class=“large-table” row-key=“key">
 </el-table>
@@ -44,6 +42,12 @@ export default{
     watch: {
         getTransfrom: function(){
             document.query(‘.el-table__body’).style.transform = this.getTransform
+            const fixeds = document.querySelectorAll(‘.el-table__fixed-body-wrapper .el-table__body’) || []
+            fixeds.forEach(e=>{
+                if(e){
+                    e.style.transform = this.getTransform
+                }
+            })
         }
     },
     mounted(){
