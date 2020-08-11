@@ -1,15 +1,6 @@
 
-<el-table ref=“table" class=“large-table” row-key=“key">
+<el-table ref=“table" class=“large-table” row-key=“key” max-height=“400">
 </el-table>
-
-<style lang=“scss” scoped>
-    .large-table{
-        /deep/ .el-table__body-wrapper{
-            max-height: 400px;
-            Overflow-y: auto;
-        }
-    }
-</style>
 
 <script>
 export default{
